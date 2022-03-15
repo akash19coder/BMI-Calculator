@@ -26,27 +26,36 @@
               </div>
               <div class="card-body">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Your Name" aria-label="Username">
+                    <input  type="text" class="form-control" placeholder="Your Name" aria-label="Username">
                     <span class="input-group-text">+</span>
-                    <input type="text" class="form-control" placeholder="Your BF" aria-label="Server">
+                    <input  type="text" class="form-control" placeholder="Your BF" aria-label="Server">
                   </div>
               </div>
               <div class="card-footer">
-                 <button  class="btn btn-primary" onclick="calculate(this)">Calculate</button>
+                 <button  class="btn btn-primary" onclick="calculate(this)"> Calculate </button>
+                 <button class="btn btn-primary" onclick="clearText(this)"> Clear </button>
               </div>
           </div>
           <div>
-            <ul id="result" class="list-group list-group-flush">
-                <li class="list-group-item"></li>
+            <ul  class="list-group list-group-flush">
+                <li id="result" class="list-group-item"></li>
               </ul>
           </div>
       </div>
 
 <script>
  let result = document.getElementById('result')
+
  function calculate(){
      result.innerHTML=` ${Math.floor(Math.random()*70)} % `;
  }
+
+ function clearText(){
+     result.innerHTML = ``;
+     
+
+ }
+ 
  
 </script>
 </body>
